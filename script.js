@@ -14,25 +14,28 @@ class Car {
 }
 
 class Truck extends Car {
-  constructor(model, mark, country, speed, takeWeight) {
+  constructor(model, mark, country, speed) {
     super(model, mark, country, speed);
-    this.takeWeight = takeWeight;
-    console.log(`truck ${mark} ${model} take ${takeWeight} kg.`);
+  }
+  takeWeight(weight) {
+    console.log(`truck ${this.mark} ${this.model} take ${weight} kg.`);
   }
 }
 
 class Bus extends Car {
-  constructor(model, mark, country, speed, takePeople) {
+  constructor(model, mark, country, speed) {
     super(model, mark, country, speed);
-    this.takePeople = takePeople;
-    console.log(`bus ${mark} ${model} take ${takePeople} people.`);
+  }
+  takePeople(takePeople) {
+    console.log(`bus ${this.mark} ${this.model} take ${takePeople} people.`);
   }
 }
 
 class Transporter extends Car {
-  constructor(model, mark, country, speed, takeCars) {
+  constructor(model, mark, country, speed) {
     super(model, mark, country, speed);
-    this.takeCars = takeCars;
-    console.log(`transporter ${mark} ${model} take ${takeCars} cars.`);
+  }
+  takeCars(takeCars) {
+    console.log(`transporter ${this.mark} ${this.model} take ${takeCars} cars.`);
   }
 }
